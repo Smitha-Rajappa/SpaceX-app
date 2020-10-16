@@ -29,5 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Heroku Link: https://spacex-app-demo.herokuapp.com/launches?limit=100&launch_success=true
 
 
-
-![Alt text](http://home/smitha/Pictures/lighthouse.png "lighthouse")
+![image](https://cloud.githubusercontent.com/home/smitha/Pictures/lighthouse.png)
