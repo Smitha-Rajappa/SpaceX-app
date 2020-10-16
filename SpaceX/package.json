@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "http-server .",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,7 +11,8 @@
     "dev:ssr": "ng run SpaceX:serve-ssr",
     "serve:ssr": "node dist/SpaceX/server/main.js",
     "build:ssr": "ng build --prod && ng run SpaceX:server:production",
-    "prerender": "ng run SpaceX:prerender"
+    "prerender": "ng run SpaceX:prerender",
+    "ssr:serve": "nodemon --watch src/ -e ts,html,scss --exec 'npm run build:ssr && npm run serve:ssr'"
   },
   "private": true,
   "dependencies": {
