@@ -1,18 +1,28 @@
-import { TestBed, async } from '@angular/core/testing';
+import { CustomService } from './custom.service';
+import { TestBed, async, ComponentFixture, inject } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+
+
+
 describe('AppComponent', () => {
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
       ],
+      providers: [
+        CustomService
+      ]
     }).compileComponents();
   }));
+
+
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -32,4 +42,9 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('SpaceX app is running!');
   });
+
+  it('should ...', inject([CustomService], (service: CustomService) => {
+    expect(service).toBeTruthy();
+  }))
+
 });

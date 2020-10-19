@@ -41,6 +41,14 @@
     padding-bottom: 15px;
     text-transform: capitalize;
   }
+
+  .reset{
+    grid-template-columns: 1fr;
+    text-align: center;
+    row-gap: 5px;
+    border-top: solid 1px;
+    padding: 5px;
+  }
   
   .filter-title {
     font-weight: 600;

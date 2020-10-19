@@ -27,6 +27,10 @@
             </button>
           </div>
         </div>
+        <!-- <p class="h5 filter-title">Reset</p> -->
+        <div class="reset">
+          <button class="btn" (click)="reset()">Reset</button>
+        </div>
       </div>
     </div>
     <div class="error" *ngIf="data.length === 0">
@@ -41,7 +45,7 @@
               <source media="(min-width: 700)" [srcset]="item.links.mission_patch_small">
               <source media="(min-width: 50)" [srcset]="item.links.mission_patch_small">
 
-            <img [src]="item.links.mission_patch_small" alt="Puppy with balloons">
+            <img [src]="item.links.mission_patch_small" alt="SpaceX Falcon9">
           </picture>
           <!-- <img [srcset]="item.links.mission_patch_small" /> -->
         <!-- </div> -->
@@ -61,12 +65,12 @@
           </p>
           <p class="h5 mission-headings">
             Successful Launch:<span class="h5 item">
-              {{ item.launch_success }}</span
+              {{ item.launch_success !== null ? item.launch_success : 'NA' }}</span
             >
           </p>
           <p class="h5 mission-headings">
             Successful Landing:<span class="h5 item">
-              {{ item.rocket.first_stage.cores[0].land_success }}</span
+              {{ item.rocket.first_stage.cores[0].land_success !== null ? item.rocket.first_stage.cores[0].land_success : 'NA'}}</span
             >
           </p>
         </div>
